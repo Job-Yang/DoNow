@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="LaunchScreenBg" translatesAutoresizingMaskIntoConstraints="NO" id="d8v-UV-VIM">
+                    <rect key="frame" x="0.0" y="0.0" width="488" height="480"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Do Now" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QKd-rm-Q2n">
+                    <rect key="frame" x="128" y="80" width="215" height="47"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="50"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="If there is any need to do tomorrow, " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="axQ-G8-WU3">
+                    <rect key="frame" x="126" y="342" width="219" height="48"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text=" best to start now. - Franklin" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IXP-qu-Nn3">
+                    <rect key="frame" x="143" y="374" width="173" height="48"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="IXP-qu-Nn3" secondAttribute="bottom" constant="30" id="3K1-0i-nyL"/>
+                <constraint firstItem="QKd-rm-Q2n" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="120" id="CWe-BX-tDs"/>
+                <constraint firstItem="d8v-UV-VIM" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="YCY-b7-vcV"/>
+                <constraint firstAttribute="centerX" secondItem="QKd-rm-Q2n" secondAttribute="centerX" id="ay4-Gb-63i"/>
+                <constraint firstItem="d8v-UV-VIM" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="iCF-dR-gRg"/>
+                <constraint firstItem="QKd-rm-Q2n" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="120" id="k8v-a4-vJQ"/>
+                <constraint firstAttribute="trailing" secondItem="d8v-UV-VIM" secondAttribute="trailing" id="nXK-eu-qj7"/>
+                <constraint firstAttribute="bottom" secondItem="d8v-UV-VIM" secondAttribute="bottom" id="oiK-Bu-2e7"/>
+                <constraint firstAttribute="centerX" secondItem="axQ-G8-WU3" secondAttribute="centerX" id="qce-oh-UVb"/>
+                <constraint firstAttribute="trailing" secondItem="d8v-UV-VIM" secondAttribute="trailing" id="qnn-Lb-Zi8"/>
+                <constraint firstAttribute="bottom" secondItem="axQ-G8-WU3" secondAttribute="bottom" constant="50" id="ttf-qv-wJk"/>
+                <constraint firstAttribute="centerX" secondItem="IXP-qu-Nn3" secondAttribute="centerX" id="zD2-GS-Y8O"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="nXK-eu-qj7"/>
+                    <exclude reference="k8v-a4-vJQ"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="548" y="455"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="LaunchScreenBg" width="960" height="960"/>
+    </resources>
+</document>
