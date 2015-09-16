@@ -11,4 +11,4 @@
 ## 界面展示
 **登陆页**
 
-![Do Now](https://github.com/Job-Yang/DoNow/blob/master/ScreenShots/%E7%99%BB%E9%99%86%E9%A1%B5.png)
+![Do Now]()
