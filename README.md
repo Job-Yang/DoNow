@@ -59,4 +59,4 @@
 
 **运行效果（截取）**
 
-![Do Now](https://github.com/Job-Yang/DoNow/blob/master/ScreenShots/%E4%B8%80%E6%AE%B5%E6%BC%94%E7%A4%BA%E8%A7%86%E9%A2%91.gif)
+![Do Now](https://github.com/Job-Yang/DoNow/blob/master/ScreenShots/演示视频.gif)
