@@ -57,6 +57,4 @@
 
 ![Do Now](https://github.com/Job-Yang/DoNow/blob/master/ScreenShots/%E8%AE%BE%E7%BD%AE1.png)
 
-**运行效果（截取）**
 
-![Do Now](https://github.com/Job-Yang/DoNow/blob/master/ScreenShots/演示视频.gif)
