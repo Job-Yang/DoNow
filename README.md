@@ -9,7 +9,7 @@
   
 ## 界面展示
 
-详细的演示视频请![点击这里](http://v.youku.com/v_show/id_XMTM1ODUxMTg4OA==.html?from=y1.7-1.2)
+详细的演示视频请[点击这里](http://v.youku.com/v_show/id_XMTM1ODUxMTg4OA==.html?from=y1.7-1.2)
 
 **登陆页**
 
