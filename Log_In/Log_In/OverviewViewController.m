@@ -66,7 +66,8 @@
     self.PercentageCompleteLabel.text = [NSString stringWithFormat:@"%.0f",(CompletedEventCount / EventCount) * 100];
     
     //加载百分比圆环
-    KDGoalBar *firstGoalBar = [[KDGoalBar alloc]initWithFrame:CGRectMake(71.5, 360, 177, 177)];
+    CGRect ScreenSize = [[UIScreen mainScreen] bounds];
+    KDGoalBar *firstGoalBar = [[KDGoalBar alloc]initWithFrame:CGRectMake(71.5/320.0*ScreenSize.size.width, 360.0/568.0*ScreenSize.size.height, 177.0/320.0*ScreenSize.size.width, 177.0/320.0*ScreenSize.size.width)];
     [firstGoalBar setPercent:(CompletedEventCount / EventCount) * 100 animated:YES];
     [self.view addSubview:firstGoalBar];
     

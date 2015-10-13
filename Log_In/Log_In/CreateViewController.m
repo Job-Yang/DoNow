@@ -190,8 +190,9 @@
     CGSize keyboardSize = [value CGRectValue].size;
     //获取键盘的高度
     self.keyboardHeight = keyboardSize.height;
-    //将view向上移动一个密码键盘的高度(216)
-    self.view.frame = CGRectMake(0, -150, 320, 568);
+    //将view向上移动一个密码键盘的高度(150)
+    CGRect ScreenSize = [[UIScreen mainScreen] bounds];
+    self.view.frame = CGRectMake(0, -150, ScreenSize.size.width, ScreenSize.size.height);
 }
 
 //取消焦点
@@ -199,7 +200,8 @@
     //发送resignFirstResponder消息，取消第一响应状态
     [[UIApplication sharedApplication]sendAction:@selector(resignFirstResponder) to:nil from:nil forEvent:nil];
     //恢复正常View
-    self.view.frame = CGRectMake(0, 0, 320, 568);
+    CGRect ScreenSize = [[UIScreen mainScreen] bounds];
+    self.view.frame = CGRectMake(0, 0, ScreenSize.size.width, ScreenSize.size.height);
 }
 
 
@@ -229,7 +231,8 @@
         //最后一个文本框放弃焦点
         [self.DateWithMinuteTextField resignFirstResponder];
         //恢复正常View
-        self.view.frame = CGRectMake(0, 0, 320, 568);
+        CGRect ScreenSize = [[UIScreen mainScreen] bounds];
+        self.view.frame = CGRectMake(0, 0, ScreenSize.size.width, ScreenSize.size.height);
     }
     return YES;
 }

@@ -33,7 +33,8 @@
     self.keyboardHeight = 0;
     self.SettingPasswordView.hidden = YES;
     self.DetailedInfoView.hidden = YES;
-    self.BasicInfoDropDownView.frame = CGRectMake(0, 125, 320, 245);
+    CGRect ScreenSize = [[UIScreen mainScreen] bounds];
+    self.BasicInfoDropDownView.frame = CGRectMake(0, 125.0/568.0*ScreenSize.size.height, ScreenSize.size.width, 245.0/568.0*ScreenSize.size.height);
     self.UsernameTextField.enabled = NO;
     self.PasswordTextField.enabled = NO;
     self.EmailTextField.enabled = NO;
@@ -269,12 +270,14 @@
     //显示设置密码view，并将下拉view下移
     if (self.SettingPasswordView.hidden == YES) {
         self.SettingPasswordView.hidden = NO;
-        self.BasicInfoDropDownView.frame = CGRectMake(0, 227, 320, 245);
+        CGRect ScreenSize = [[UIScreen mainScreen] bounds];
+        self.BasicInfoDropDownView.frame = CGRectMake(0, 227.0/568.0*ScreenSize.size.height, ScreenSize.size.width, 245.0/568.0*ScreenSize.size.height);
     }
     else{
         //隐藏设置密码view，恢复正常view
         self.SettingPasswordView.hidden = YES;
-        self.BasicInfoDropDownView.frame = CGRectMake(0, 125, 320, 245);
+        CGRect ScreenSize = [[UIScreen mainScreen] bounds];
+        self.BasicInfoDropDownView.frame = CGRectMake(0, 125.0/568.0*ScreenSize.size.height, ScreenSize.size.width, 245.0/568.0*ScreenSize.size.height);
     }
 }
 
@@ -314,7 +317,8 @@
         }
         [self.SettingEmailButton setTitle:@"修改" forState:UIControlStateNormal];
     }
-    self.view.frame = CGRectMake(0, 0, 320, 568);
+    CGRect ScreenSize = [[UIScreen mainScreen] bounds];
+    self.view.frame = CGRectMake(0, 0, ScreenSize.size.width, ScreenSize.size.height);
 }
 
 //修改生日事件
@@ -331,7 +335,8 @@
         }
         [self.SettingBrithdayButton setTitle:@"修改" forState:UIControlStateNormal];
     }
-    self.view.frame = CGRectMake(0, 0, 320, 568);
+    CGRect ScreenSize = [[UIScreen mainScreen] bounds];
+    self.view.frame = CGRectMake(0, 0, ScreenSize.size.width, ScreenSize.size.height);
 }
 
 //修改性别事件
@@ -348,7 +353,8 @@
         }
         [self.SettingGenderButton setTitle:@"修改" forState:UIControlStateNormal];
     }
-    self.view.frame = CGRectMake(0, 0, 320, 568);
+    CGRect ScreenSize = [[UIScreen mainScreen] bounds];
+    self.view.frame = CGRectMake(0, 0, ScreenSize.size.width, ScreenSize.size.height);
 }
 
 //向右按钮事件
@@ -385,7 +391,8 @@
     //发送resignFirstResponder消息，取消第一响应状态
     [[UIApplication sharedApplication]sendAction:@selector(resignFirstResponder) to:nil from:nil forEvent:nil];
         //恢复正常View
-    self.view.frame = CGRectMake(0, 0, 320, 568);
+    CGRect ScreenSize = [[UIScreen mainScreen] bounds];
+    self.view.frame = CGRectMake(0, 0, ScreenSize.size.width, ScreenSize.size.height);
 }
 
 //注册键盘通知
@@ -404,8 +411,9 @@
     CGSize keyboardSize = [value CGRectValue].size;
     //获取键盘的高度
     self.keyboardHeight = keyboardSize.height;
-    //将view向上移动一个密码键盘的高度(190)
-    self.view.frame = CGRectMake(0, -145, 320, 568);
+    //将view向上移动一个密码键盘的高度(145)
+    CGRect ScreenSize = [[UIScreen mainScreen] bounds];
+    self.view.frame = CGRectMake(0, -145, ScreenSize.size.width, ScreenSize.size.height);
 }
 
 //重写textFieldDelegate方法,Return换行
@@ -419,7 +427,8 @@
         //最后一个文本框放弃焦点
         [self.NewPasswordTextField resignFirstResponder];
         //恢复正常View
-        self.view.frame = CGRectMake(0, 0, 320, 568);
+        CGRect ScreenSize = [[UIScreen mainScreen] bounds];
+        self.view.frame = CGRectMake(0, 0, ScreenSize.size.width, ScreenSize.size.height);
     }
     else if (textField == self.EmailTextField){
         [self.BrithdayTextField becomeFirstResponder];
@@ -431,7 +440,8 @@
         //最后一个文本框放弃焦点
         [self.GenderTextField resignFirstResponder];
         //恢复正常View
-        self.view.frame = CGRectMake(0, 0, 320, 568);
+        CGRect ScreenSize = [[UIScreen mainScreen] bounds];
+        self.view.frame = CGRectMake(0, 0, ScreenSize.size.width, ScreenSize.size.height);
     }
     else if (textField == self.RealNameTextField)
     {

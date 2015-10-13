@@ -16,6 +16,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
     self.HeadImage = [[UIImage alloc]init];
     //设置默认头像
     self.HeadImage = [UIImage imageNamed:@"avatar-1"];

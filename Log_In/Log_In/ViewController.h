@@ -17,6 +17,7 @@
 @property (retain,nonatomic) FMDatabase *db;                //FMDB数据库对象
 @property (copy,nonatomic) NSString *User;                  //登录账号
 
+
 @property (weak, nonatomic) IBOutlet UITextField *UsernameTextField;        //账号TextField
 @property (weak, nonatomic) IBOutlet UITextField *PasswordTextField;        //密码TextField
 @property (weak, nonatomic) IBOutlet UIButton *SignInButton;                //登陆Button

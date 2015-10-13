@@ -24,7 +24,8 @@
     self.DatePickerView.hidden = YES;
     //使用calendarView对象来创建日历内容
     self.calendarView = [[MyCalendarItem alloc] init];
-    self.calendarView.frame = CGRectMake(15, 100, 300, 340);
+    CGRect ScreenSize = [[UIScreen mainScreen] bounds];
+    self.calendarView.frame = CGRectMake(10.0/320.0*ScreenSize.size.width, 100.0/568.0*ScreenSize.size.height, 300.0/320.0*ScreenSize.size.width, 340.0/568.0*ScreenSize.size.height);
     [self.view addSubview:self.calendarView];
     //设置当前日期
     self.calendarView.date = [NSDate date];
@@ -51,7 +52,8 @@
     [self.calendarView removeFromSuperview];
     //重新创建一个calendarView
     self.calendarView = [[MyCalendarItem alloc] init];
-    self.calendarView.frame = CGRectMake(10, 100, 300, 340);
+    CGRect ScreenSize = [[UIScreen mainScreen] bounds];
+    self.calendarView.frame = CGRectMake(10.0/320.0*ScreenSize.size.width, 100.0/568.0*ScreenSize.size.height, 300.0/320.0*ScreenSize.size.width, 340.0/568.0*ScreenSize.size.height);
     [self.view addSubview:self.calendarView];
     //设置日历时间为 上下月增量的整月倍
     self.calendarView.date = [NSDate dateWithTimeIntervalSinceNow:-2592000 * (self.LastCount - self.NextCount + 1)];
@@ -70,7 +72,8 @@
     [self.calendarView removeFromSuperview];
     //重新创建一个calendarView
     self.calendarView = [[MyCalendarItem alloc] init];
-    self.calendarView.frame = CGRectMake(10, 100, 300, 340);
+    CGRect ScreenSize = [[UIScreen mainScreen] bounds];
+    self.calendarView.frame = CGRectMake(10.0/320.0*ScreenSize.size.width, 100.0/568.0*ScreenSize.size.height, 300.0/320.0*ScreenSize.size.width, 340.0/568.0*ScreenSize.size.height);
     [self.view addSubview:self.calendarView];
      //设置日历时间为 上下月增量的整月倍
     self.calendarView.date = [NSDate dateWithTimeIntervalSinceNow:2592000 * (self.NextCount - self.LastCount + 1)];
@@ -130,7 +133,8 @@
     self.DatePickerView.hidden = YES;
     //以当前时间为基准创建日历
     self.calendarView = [[MyCalendarItem alloc] init];
-    self.calendarView.frame = CGRectMake(15, 100, 300, 340);
+    CGRect ScreenSize = [[UIScreen mainScreen] bounds];
+    self.calendarView.frame = CGRectMake(10.0/320.0*ScreenSize.size.width, 100.0/568.0*ScreenSize.size.height, 300.0/320.0*ScreenSize.size.width, 340.0/568.0*ScreenSize.size.height);
     self.calendarView.date = [NSDate date];
     [self.view addSubview:self.calendarView];
 }
@@ -141,7 +145,8 @@
     self.DatePickerView.hidden = YES;
     //以日期选择器选择的事件创建日历
     self.calendarView = [[MyCalendarItem alloc] init];
-    self.calendarView.frame = CGRectMake(15, 100, 300, 340);
+    CGRect ScreenSize = [[UIScreen mainScreen] bounds];
+    self.calendarView.frame = CGRectMake(10.0/320.0*ScreenSize.size.width, 100.0/568.0*ScreenSize.size.height, 300.0/320.0*ScreenSize.size.width, 340.0/568.0*ScreenSize.size.height);
     self.calendarView.date = self.DatePicker.date;
     NSDateFormatter *dateformat = [[NSDateFormatter alloc]init];
     [dateformat setDateFormat:@"yyyy年MM月"];
