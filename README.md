@@ -5,9 +5,11 @@
   用户界面使用Storyboard搭建，由登陆页，注册页，导航页，主页面，增加安排页，日历页，总览页，分组页，列表页，时间轴，设置页 11页面构成。界面设置采用了 [Do UI Kit](http://www.invisionapp.com/) 的开源设计，再次感谢开源的无穷魅力！
   
   数据库使用FMDB(SQLite类库)作为本地数据库。实现了多用户登录，自动登录等功能。
-  PS：还没来得及做屏幕适配，请在5S运行已达到最好效果。
+  PS：正在进行屏幕适配。
   
 ## 界面展示
+
+详细的演示视频请![点击这里](http://v.youku.com/v_show/id_XMTM1ODUxMTg4OA==.html?from=y1.7-1.2)
 
 **登陆页**
 
@@ -56,5 +58,6 @@
 **设置页**
 
 ![Do Now](https://github.com/Job-Yang/DoNow/blob/master/ScreenShots/%E8%AE%BE%E7%BD%AE1.png)
+
 
 
