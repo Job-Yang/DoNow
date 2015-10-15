@@ -2,8 +2,8 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x",
-      "filename" : "snoozed.png"
+      "filename" : "overdueLine.png",
+      "scale" : "1x"
     },
     {
       "idiom" : "universal",

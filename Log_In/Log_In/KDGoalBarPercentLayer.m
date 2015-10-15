@@ -4,8 +4,8 @@
 
 #define toRadians(x) ((x)*M_PI / 180.0)
 #define toDegrees(x) ((x)*180.0 / M_PI)
-#define innerRadius    65.5  
-#define outerRadius    70.5
+//#define innerRadius    65.5  
+//#define outerRadius    70.5
 
 @implementation KDGoalBarPercentLayer
 @synthesize percent;
@@ -30,9 +30,10 @@
     
     CGMutablePathRef path = CGPathCreateMutable();
     
-    CGPathAddRelativeArc(path, NULL, center.x, center.y, innerRadius, -(M_PI / 2), delta);
-    CGPathAddRelativeArc(path, NULL, center.x, center.y, outerRadius, delta - (M_PI / 2), -delta);
-    CGPathAddLineToPoint(path, NULL, center.x, center.y-innerRadius);
+    CGRect ScreenSize = [[UIScreen mainScreen] bounds];
+    CGPathAddRelativeArc(path, NULL, center.x, center.y, 65.5/568.0*ScreenSize.size.height, -(M_PI / 2), delta);
+    CGPathAddRelativeArc(path, NULL, center.x, center.y, 70.5/568.0*ScreenSize.size.height, delta - (M_PI / 2), -delta);
+    CGPathAddLineToPoint(path, NULL, center.x, center.y-65.5/568.0*ScreenSize.size.height);
     
     CGContextAddPath(ctx, path);
     CGContextFillPath(ctx);
@@ -56,9 +57,10 @@
     
     CGMutablePathRef path = CGPathCreateMutable();
     
-    CGPathAddRelativeArc(path, NULL, center.x, center.y, innerRadius, -(M_PI / 2), delta);
-    CGPathAddRelativeArc(path, NULL, center.x, center.y, outerRadius, delta - (M_PI / 2), -delta);
-    CGPathAddLineToPoint(path, NULL, center.x, center.y-innerRadius);
+    CGRect ScreenSize = [[UIScreen mainScreen] bounds];
+    CGPathAddRelativeArc(path, NULL, center.x, center.y, 65.5/568.0*ScreenSize.size.height, -(M_PI / 2), delta);
+    CGPathAddRelativeArc(path, NULL, center.x, center.y, 70.5/568.0*ScreenSize.size.height, delta - (M_PI / 2), -delta);
+    CGPathAddLineToPoint(path, NULL, center.x, center.y-65.5/568.0*ScreenSize.size.height);
     
     CGContextAddPath(ctx, path);
     CGContextFillPath(ctx);

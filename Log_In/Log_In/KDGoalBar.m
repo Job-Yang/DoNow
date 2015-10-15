@@ -38,8 +38,8 @@
 
 -(void)layoutSubviews {
     CGRect frame = self.frame;
-    //int percent = percentLayer.percent * 100;
-    //[percentLabel setText:[NSString stringWithFormat:@"%i%%", percent]];
+    int percent = percentLayer.percent * 100;
+    [percentLabel setText:[NSString stringWithFormat:@"%i%%", percent]];
 
     
     CGRect labelFrame = percentLabel.frame;
@@ -54,14 +54,12 @@
     self.backgroundColor = [UIColor clearColor];
     self.clipsToBounds = NO;
 
-    
-    percentLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 125, 125)];
-    [percentLabel setFont:[UIFont systemFontOfSize:60]];
-    [percentLabel setTextColor:[UIColor colorWithRed:89/255.0 green:89/255.0 blue:89/255.0 alpha:1.0]];
-    [percentLabel setTextAlignment:UITextAlignmentCenter];
+     percentLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 125, 125)];
+    [percentLabel setFont:[UIFont systemFontOfSize:20]];
+    [percentLabel setTextColor:[UIColor whiteColor]];
+    [percentLabel setTextAlignment:NSTextAlignmentCenter];
     [percentLabel setBackgroundColor:[UIColor clearColor]];
     percentLabel.adjustsFontSizeToFitWidth = YES;
-    percentLabel.minimumFontSize = 10;
     [self addSubview:percentLabel];
     
     thumbLayer = [CALayer layer];
@@ -81,7 +79,7 @@
     
     [self.layer addSublayer:percentLayer];
     [self.layer addSublayer:thumbLayer];
-     
+    
     
 }
 

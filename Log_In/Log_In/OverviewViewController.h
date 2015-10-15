@@ -15,11 +15,9 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *HeadImageView;        //头像
 @property (weak, nonatomic) IBOutlet UILabel *NameLabel;                //姓名
-@property (weak, nonatomic) IBOutlet UILabel *RankingPercentLabel;      //排名百分比（未实现）
 @property (weak, nonatomic) IBOutlet UILabel *CompletedCountLabel;      //完成数
 @property (weak, nonatomic) IBOutlet UILabel *UnCompletedCountLabel;    //未完成数
 @property (weak, nonatomic) IBOutlet UILabel *EventCountLabel;          //总数
-@property (weak, nonatomic) IBOutlet UILabel *PercentageCompleteLabel;  //完成百分比
 
 
 @property (copy ,nonatomic) NSString *path;                 //沙盒路径

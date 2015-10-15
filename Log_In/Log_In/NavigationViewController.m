@@ -17,6 +17,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    //代理
+    self.TableView.dataSource = self;
+    self.TableView.delegate = self;
+    
     //将头像ImageView设置为圆形
     self.HeadImageView.layer.cornerRadius = self.HeadImageView.frame.size.width / 2;
     self.HeadImageView.clipsToBounds = YES;
@@ -24,7 +28,77 @@
     AppDelegate *del = (AppDelegate *)[[UIApplication sharedApplication]delegate];
     self.HeadImageView.image = del.HeadImage;
     
+    //设置 TableView背景图
+    self.TableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg"]];
+    //隐藏 TableView自带行线
+    self.TableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    //初始化数组
+    self.NavNameArr = [[NSMutableArray alloc]initWithObjects:@"主页", @"日历", @"总览", @"分组", @"列表", @"时间轴", @"设置", nil];
+    self.NavIconArr = [[NSMutableArray alloc]initWithObjects:@"home", @"calendar", @"overview", @"groups", @"lists", @"timeline", @"settings", nil];
+    //判断设备是否是 4S
+    CGRect ScreenSize = [[UIScreen mainScreen] bounds];
+    if (ScreenSize.size.width * ScreenSize.size.height == 320 * 480) {
+        self.HeadImageView.hidden = YES;
+    }
+    
 }
+
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
+    return self.NavNameArr.count;
+}
+
+//设置 tableView行高
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return self.TableView.frame.size.height / 7;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    //静态标记
+    static NSString *cellID = @"cellID";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+    //设置 cell背景图
+    cell.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg"]];
+
+    //关联cell中的控件
+    UIImageView *NavIcon = (UIImageView *)[cell viewWithTag:100];
+    UILabel *NavName = (UILabel *)[cell viewWithTag:101];
+    UIImageView *line = (UIImageView *)[cell viewWithTag:102];
+
+    //设置控件中的值
+    NavIcon.image = [UIImage imageNamed:self.NavIconArr[indexPath.row]];
+    NavName.text = self.NavNameArr[indexPath.row];
+    line.image = [UIImage imageNamed:@"line-1"];
+
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row == 0) {
+        [self performSegueWithIdentifier:@"GoOne" sender:self];
+    }
+    else if (indexPath.row == 1) {
+        [self performSegueWithIdentifier:@"GoTwo" sender:self];
+    }
+    else if (indexPath.row == 2) {
+        [self performSegueWithIdentifier:@"GoThree" sender:self];
+    }
+    else if (indexPath.row == 3) {
+        [self performSegueWithIdentifier:@"GoFour" sender:self];
+    }
+    else if (indexPath.row == 4) {
+        [self performSegueWithIdentifier:@"GoFive" sender:self];
+    }
+    else if (indexPath.row == 5) {
+        [self performSegueWithIdentifier:@"GoSix" sender:self];
+    }
+    else if (indexPath.row == 6) {
+        [self performSegueWithIdentifier:@"GoSeven" sender:self];
+    }
+}
+
 
 //回到主界面
 - (IBAction)ExitButtonAction:(id)sender {
@@ -36,10 +110,6 @@
     NSString *subtypeString = kCATransitionFromRight;
     [self transitionWithType:kCATransitionPush WithSubtype:subtypeString ForView:self.view.window];
     [self dismissViewControllerAnimated:NO completion:nil];
-}
-
-//跳转对应页面
-- (IBAction)GoViewButtonsAction:(id)sender {
 }
 
 

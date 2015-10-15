@@ -34,7 +34,7 @@
     self.SettingPasswordView.hidden = YES;
     self.DetailedInfoView.hidden = YES;
     CGRect ScreenSize = [[UIScreen mainScreen] bounds];
-    self.BasicInfoDropDownView.frame = CGRectMake(0, 125.0/568.0*ScreenSize.size.height, ScreenSize.size.width, 245.0/568.0*ScreenSize.size.height);
+    self.BasicInfoDropDownView.frame = CGRectMake(0, 112.0/568.0*ScreenSize.size.height, ScreenSize.size.width, 266.0/568.0*ScreenSize.size.height);
     self.UsernameTextField.enabled = NO;
     self.PasswordTextField.enabled = NO;
     self.EmailTextField.enabled = NO;
@@ -271,13 +271,13 @@
     if (self.SettingPasswordView.hidden == YES) {
         self.SettingPasswordView.hidden = NO;
         CGRect ScreenSize = [[UIScreen mainScreen] bounds];
-        self.BasicInfoDropDownView.frame = CGRectMake(0, 227.0/568.0*ScreenSize.size.height, ScreenSize.size.width, 245.0/568.0*ScreenSize.size.height);
+        self.BasicInfoDropDownView.frame = CGRectMake(0, 227.0/568.0*ScreenSize.size.height, ScreenSize.size.width, 266.0/568.0*ScreenSize.size.height);
     }
     else{
         //隐藏设置密码view，恢复正常view
         self.SettingPasswordView.hidden = YES;
         CGRect ScreenSize = [[UIScreen mainScreen] bounds];
-        self.BasicInfoDropDownView.frame = CGRectMake(0, 125.0/568.0*ScreenSize.size.height, ScreenSize.size.width, 245.0/568.0*ScreenSize.size.height);
+        self.BasicInfoDropDownView.frame = CGRectMake(0, 112.0/568.0*ScreenSize.size.height, ScreenSize.size.width, 266.0/568.0*ScreenSize.size.height);
     }
 }
 

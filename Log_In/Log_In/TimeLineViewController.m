@@ -78,7 +78,7 @@
     [formatter setDateFormat:@"yyyy-MM-dd"];
     NSString *DateString = [formatter stringFromDate:[NSDate date]];
     NSArray *dateArr = [DateString componentsSeparatedByString:@"-"];
-    self.YearNumberLabel.text = dateArr[0];
+    self.YearNumberLabel.text = [NSString stringWithFormat:@"%@ 年",dateArr[0]];
     int month = [dateArr[1] intValue];
     switch (month) {
         case 1:
@@ -203,8 +203,7 @@
     UILabel *eventLabel = (UILabel *)[cell viewWithTag:300];
     UILabel *aimLabel = (UILabel *)[cell viewWithTag:301];
     UILabel *dateLabel = (UILabel *)[cell viewWithTag:302];
-    UIImageView *Completed = (UIImageView *)[cell viewWithTag:303];
-    UIImageView *TimeLine = (UIImageView *)[cell viewWithTag:304];
+    UIImageView *TimeLine = (UIImageView *)[cell viewWithTag:303];
     //设置控件中的值
     eventLabel.text = arr[0];
     aimLabel.text = arr[1];
@@ -216,13 +215,11 @@
     NSString *day = TimeArrayDay[0];
     dateLabel.text = [NSString stringWithFormat:@"%@.%@",month,day];
     if ([arr[3] isEqualToString:@"YES"]) {
-        Completed.image = [UIImage imageNamed:@"completed-1"];
+        TimeLine.image = [UIImage imageNamed:@"completedLine"];
     }
     else{
-        Completed.image = [UIImage imageNamed:@"snoozed-1"];
+        TimeLine.image = [UIImage imageNamed:@"overdueLine"];
     }
-    //每行添加一个自定义的行线
-    TimeLine.image = [UIImage imageNamed:@"verticalLine"];
     return cell;
 }
 

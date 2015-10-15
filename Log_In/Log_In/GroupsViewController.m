@@ -140,10 +140,10 @@
     }
     
    //由于每个安排由安排与目标组成，故数量为count值的一半
-   self.ImportantAndEmergencyEventNumberLabel.text = [NSString stringWithFormat:@"%lu",self.ImportantAndEmergencyEventArr.count / 2];
-   self.ImportantAndNormalEventNumberLabel.text = [NSString stringWithFormat:@"%lu",self.ImportantAndNormalEventArr.count / 2];
-   self.UnimportantAndEmergencyEventNumberLabel.text = [NSString stringWithFormat:@"%lu",self.UnimportantAndEmergencyEventArr.count / 2];
-   self.UnimportantAndNormalEventNumberLabel.text = [NSString stringWithFormat:@"%lu",self.UnimportantAndNormalEventArr.count / 2];
+   self.ImportantAndEmergencyEventNumberLabel.text = [NSString stringWithFormat:@"%lu 件安排",self.ImportantAndEmergencyEventArr.count / 2];
+   self.ImportantAndNormalEventNumberLabel.text = [NSString stringWithFormat:@"%lu 件安排",self.ImportantAndNormalEventArr.count / 2];
+   self.UnimportantAndEmergencyEventNumberLabel.text = [NSString stringWithFormat:@"%lu 件安排",self.UnimportantAndEmergencyEventArr.count / 2];
+   self.UnimportantAndNormalEventNumberLabel.text = [NSString stringWithFormat:@"%lu 件安排",self.UnimportantAndNormalEventArr.count / 2];
     
     //设置分类安排数组的键值，作为列表每个Section的标题
     self.EventDic = [[NSDictionary alloc]initWithObjectsAndKeys:

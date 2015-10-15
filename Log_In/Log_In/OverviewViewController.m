@@ -63,7 +63,6 @@
     self.EventCountLabel.text = [NSString stringWithFormat:@"%.0f",EventCount];
     self.CompletedCountLabel.text = [NSString stringWithFormat:@"%.0f",CompletedEventCount];
     self.UnCompletedCountLabel.text = [NSString stringWithFormat:@"%.0f",EventCount - CompletedEventCount];
-    self.PercentageCompleteLabel.text = [NSString stringWithFormat:@"%.0f",(CompletedEventCount / EventCount) * 100];
     
     //加载百分比圆环
     CGRect ScreenSize = [[UIScreen mainScreen] bounds];
