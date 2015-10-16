@@ -10,6 +10,10 @@
 
 详细的演示视频请[点击这里](http://v.youku.com/v_show/id_XMTM1ODUxMTg4OA==.html?from=y1.7-1.2)
 
+**LaunchScreen**
+
+![Do Now](https://github.com/Job-Yang/DoNow/blob/master/ScreenShots/LaunchScreen.png)
+
 **登陆页**
 
 ![Do Now](https://github.com/Job-Yang/DoNow/blob/master/ScreenShots/%E7%99%BB%E9%99%86%E9%A1%B5.png)
